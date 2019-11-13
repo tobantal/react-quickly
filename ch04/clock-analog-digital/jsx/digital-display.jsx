@@ -1,3 +1,4 @@
 const DigitalDisplay = function(props) {
-  return <div>{props.time}</div>
+  let dateStr = props.time.toString()
+  return <div>{dateStr}</div>
 }
