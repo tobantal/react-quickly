@@ -6,7 +6,10 @@ class Content extends React.Component {
   }
   handleChange(event) {
     console.log('Typed: ', event.target.value);
-    this.setState({ accountNumber: event.target.value.replace(/[^0-9]/ig, '') });
+    let newValue = event.target.value.replace(/[^0-9]/g, '');
+    if (newValue === this.state.accountNumber) return;
+    console.log("New Value!");
+    this.setState({ accountNumber: newValue });
   }
   render() {
     return React.createElement(
