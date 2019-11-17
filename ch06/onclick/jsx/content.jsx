@@ -5,13 +5,14 @@ class Content extends React.Component {
   }
   handleClick(event) {
     this.setState({counter: ++this.state.counter})
+    console.log("counter = ", this.state.counter)
   }
   render() {
     return (
       <div>
         <button
           onClick={this.handleClick.bind(this)}
-          className="btn btn-primary">
+          className="btn btn-danger">
           Don't click me {this.state.counter} times!
         </button>
       </div>

@@ -21,16 +21,24 @@ class SliderButtons extends React.Component {
     $('#slider').off('slide', this.handleSlide)
   }
   render() {
+   let lessThan1 = this.state.sliderValue < 1
+   let lessMessage = lessThan1 ? "X" :  "1 Less (" + (this.state.sliderValue - 1) + ")"
+   let blueStyle = {color: 'blue'}
+   let moreThan99 = this.state.sliderValue > 99
+   let moreMessage = moreThan99 ? "X" : "1 More (" + (this.state.sliderValue + 1) + ")"
+
     return <div>
-      <button disabled={(this.state.sliderValue<1) ? true : false}
+      <button disabled={lessThan1}
         className="btn default-btn"
-        onClick={this.handleChange(-1)}>
-          1 Less ({this.state.sliderValue - 1})
+        onClick={this.handleChange(-1)} 
+	style={blueStyle}>
+	{lessMessage}
       </button>
-      <button disabled={(this.state.sliderValue>99) ? true : false}
+      <button disabled={moreThan99}
         className="btn default-btn"
-        onClick={this.handleChange(1)}>
-          1 More ({this.state.sliderValue + 1})
+        onClick={this.handleChange(1)} 
+	style={blueStyle}>
+	{moreMessage}
       </button>
     </div>
   }
