@@ -8,7 +8,9 @@ const LoadWebsite = (Component) => {
       return 'https://facebook.github.io/react/docs/top-level-api.html'
     }
     handleClick(event) {
-      document.getElementById('frame').src = this.getUrl()
+	let frame = document.getElementById('frame')
+	console.log(frame) 
+	frame.src = this.getUrl()
     }
     componentDidMount() {
       console.log(ReactDOM.findDOMNode(this))
