@@ -21,7 +21,7 @@ class AddSub extends React.Component {
     window.removeEventListener('resize', this.handleResize)
   }
   handleResize(e) {
-    let w = 1+ Math.round(window.innerWidth / 300)
+    let w = 1 + Math.round(window.innerWidth / 300)
     this.setState({
       taggerStyle: {top: this.props.order*w*10, width: w*10, height: w*10},
       textStyle: {left: w*13, fontSize: 7*w}
