@@ -2,7 +2,7 @@ class Button extends React.Component {
   render() {
     return React.createElement(
       "button",
-      { className: "btn" },
+      { className: "btn btn-primary" },
       this.props.buttonLabel
     );
   }

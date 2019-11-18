@@ -2,13 +2,13 @@ class Button extends React.Component {
   render() {
     return React.createElement(
       'button',
-      { className: 'btn' },
+      { className: this.props.className },
       this.props.buttonLabel
     );
   }
 }
 
-Button.defaultProps = { buttonLabel: 'Submit' };
+Button.defaultProps = { buttonLabel: 'Submit', className: 'btn' };
 
 Button.propTypes = {
   handler: PropTypes.func.isRequired,

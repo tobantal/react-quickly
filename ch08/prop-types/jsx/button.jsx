@@ -1,10 +1,10 @@
 class Button extends React.Component {
   render() {
-    return <button className="btn">{this.props.buttonLabel}</button>
+    return <button className={this.props.className}>{this.props.buttonLabel}</button>
   }
 }
 
-Button.defaultProps = {buttonLabel: 'Submit'}
+Button.defaultProps = {buttonLabel: 'Submit', className: 'btn'}
 
 Button.propTypes = {
   handler: PropTypes.func.isRequired,
