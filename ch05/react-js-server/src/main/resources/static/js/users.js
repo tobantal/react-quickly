@@ -35,6 +35,12 @@ class Users extends React.Component {
             React.createElement(
               "td",
               null,
+              " ",
+              user.uuid
+            ),
+            React.createElement(
+              "td",
+              null,
               user.name
             )
           ))

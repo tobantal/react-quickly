@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
 
 import java.util.List;
+import java.util.UUID;
 import java.util.ArrayList;
 
 @RestController
@@ -16,10 +17,10 @@ public class UserController {
 	private List<User> users = new ArrayList<>();
 
 	{
-		users.add(new User(0, "Ivan"));
-		users.add(new User(1, "Masha"));
-		users.add(new User(2, "Oleg"));
-
+		users.add(new User(0, UUID.randomUUID().toString(), "Ivan"));
+		users.add(new User(1, UUID.randomUUID().toString(), "Masha"));
+		users.add(new User(2, UUID.randomUUID().toString(), "Oleg"));
+		users.add(new User(3, UUID.randomUUID().toString(), "Petr"));
 	}
 
 	@GetMapping("users")
@@ -34,5 +35,6 @@ public class UserController {
 @AllArgsConstructor
 class User {
 	private int id;
-	private String name;	
+	private String uuid;
+	private String name;
 }

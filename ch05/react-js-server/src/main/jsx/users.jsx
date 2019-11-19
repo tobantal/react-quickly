@@ -16,7 +16,8 @@ class Users extends React.Component {
       <table className="table-striped table-condensed table table-bordered table-hover">
         <tbody>{this.state.users.map((user)=>
           <tr key={user.id}>
-            <td> {user.id}</td>	
+            <td> {user.id}</td>
+            <td> {user.uuid}</td>	
             <td>{user.name}</td>
           </tr>)}
         </tbody>
